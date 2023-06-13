@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/removeEmpresa")
-public class RemoveEmpresa extends HttpServlet {
+public class RemoveEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,7 +21,7 @@ public class RemoveEmpresa extends HttpServlet {
 		Banco banco = new Banco();
 		banco.removerEmpresa(id);
 		
-		//ApÛs remover redireciona para a p·gina novamente.
+		//Ap√≥s remover redireciona para a p√°gina novamente.
 		response.sendRedirect("listaEmpresas");
 ;	}
 }
